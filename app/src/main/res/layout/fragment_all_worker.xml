@@ -5,20 +5,24 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/light_white"
+    android:background="@color/prim"
+    android:backgroundTint="@color/prim"
     tools:context=".AllWorkerFragment">
 
 
     <View
-        android:id="@+id/view2"
-        android:layout_width="412dp"
-        android:layout_height="645dp"
+        android:id="@+id/worker_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/box_round"
-        android:backgroundTint="@color/prim"
-        tools:layout_editor_absoluteY="86dp" />
+        android:backgroundTint="@color/light_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/worker_title"
         android:layout_width="290dp"
         android:layout_height="41dp"
         android:fontFamily="@font/sleigothic"

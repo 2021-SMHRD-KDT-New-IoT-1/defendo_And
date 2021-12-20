@@ -6,17 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class loginActivity extends AppCompatActivity {
 
-    EditText input_id;
-    EditText input_pw;
-    Button btn_login;
-    Button btn_join;
-    ImageView logo;
+    private EditText input_id;
+    private EditText input_pw;
+    private Button btn_login;
+    private Button btn_join;
+    private ImageView logo;
+    private CheckBox checkBox;
 
 
     @Override
@@ -24,17 +26,18 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
+        checkBox = findViewById(R.id.checkBox);
         input_id = findViewById(R.id.input_id);
         input_pw = findViewById(R.id.input_pw);
         btn_join = findViewById(R.id.btn_join);
         btn_login = findViewById(R.id.btn_login);
         logo = findViewById(R.id.logo);
 
-        logo.setTranslationY(300);
+        /*logo.setTranslationY(300);
         input_id.setTranslationY(300);
         input_pw.setTranslationY(300);
         btn_login.setTranslationY(300);
-        btn_join.setTranslationY(300);
+        btn_join.setTranslationY(300);*/
 
 
 

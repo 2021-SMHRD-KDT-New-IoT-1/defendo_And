@@ -9,12 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 
 public class AllWorkerFragment extends Fragment {
 
+    private View worker_view;
+    private TextView worker_title;
     private ListView listview_worker;
     private ArrayList<String> al = new ArrayList<>();
 

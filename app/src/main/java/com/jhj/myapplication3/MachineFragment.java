@@ -7,58 +7,46 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MachineFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MachineFragment extends Fragment {
+    private View join_view;
+    private TextView join_title;
+    private TextView m_title1;
+    private EditText m_id;
+    private EditText w_id;
+    private Button btn_register;
+    private TextView m_title2;
+    private EditText edit_mid;
+    private EditText edit_wid;
+    private Button btn_modify;
+    private Button btn_back_medit;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public MachineFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MachineFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MachineFragment newInstance(String param1, String param2) {
-        MachineFragment fragment = new MachineFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        View v =inflater.inflate(R.layout.fragment_machine, container, false);
+
+        join_view = v.findViewById(R.id.join_view);
+        join_title = v.findViewById(R.id.join_title);
+        m_title1 = v.findViewById(R.id.m_title1);
+        m_id = v.findViewById(R.id.m_id);
+        w_id = v.findViewById(R.id.w_id);
+        btn_register = v.findViewById(R.id.btn_register);
+        m_title2 = v.findViewById(R.id.m_title2);
+        edit_mid = v.findViewById(R.id.edit_mid);
+        edit_wid = v.findViewById(R.id.edit_wid);
+        btn_modify = v.findViewById(R.id.btn_modify);
+        btn_back_medit = v.findViewById(R.id.btn_back_medit);
+
+
+
+
         return inflater.inflate(R.layout.fragment_machine, container, false);
     }
 }

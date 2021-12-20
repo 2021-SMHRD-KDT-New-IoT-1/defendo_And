@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private ImageView imageView;
-    //hello
+    //hello hi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

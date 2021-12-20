@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     //hello
     //hello my name is csm
-    //jsh
+    //my name is jsh
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

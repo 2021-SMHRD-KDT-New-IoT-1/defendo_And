@@ -14,29 +14,33 @@
     <View
         android:id="@+id/join_view"
         android:layout_width="wrap_content"
-        android:layout_height="609dp"
+        android:layout_height="0dp"
         android:background="@drawable/box_round"
         android:backgroundTint="@color/light_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/join_title"
         android:layout_width="281dp"
         android:layout_height="38dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/seco"
         android:fontFamily="@font/sleigothic"
         android:gravity="center"
         android:text="Machine resistration"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/m_title1"
@@ -81,7 +85,7 @@
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="근로자ID를 입력하세요"
-        android:inputType="textPersonName|textPassword"
+        android:inputType="textPersonName"
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.488"
@@ -131,7 +135,7 @@
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="안전모ID를 입력하세요"
-        android:inputType="textPersonName|textPassword"
+        android:inputType="textPersonName"
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.0"
@@ -148,7 +152,7 @@
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="근로자ID를 입력하세요"
-        android:inputType="textPersonName|textPassword"
+        android:inputType="textPersonName"
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="1.0"
@@ -197,7 +201,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="59dp" />
+        app:layout_constraintGuide_begin="122dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"

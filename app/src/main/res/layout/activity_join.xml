@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo2" />
 
     <EditText
-        android:id="@+id/input_pw2"
+        android:id="@+id/join_pw"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -84,10 +84,10 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_idCheck" />
 
     <EditText
-        android:id="@+id/input_pw3"
+        android:id="@+id/join_name"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -100,10 +100,10 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/input_pw2" />
+        app:layout_constraintTop_toBottomOf="@+id/join_pw" />
 
     <EditText
-        android:id="@+id/input_pw4"
+        android:id="@+id/join_tel"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -116,10 +116,10 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/input_pw3" />
+        app:layout_constraintTop_toBottomOf="@+id/join_name" />
 
     <EditText
-        android:id="@+id/input_pw5"
+        android:id="@+id/join_aff"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -132,10 +132,10 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/input_pw4" />
+        app:layout_constraintTop_toBottomOf="@+id/join_tel" />
 
     <EditText
-        android:id="@+id/input_id2"
+        android:id="@+id/join_id"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_marginTop="4dp"
@@ -167,10 +167,10 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/btn_join2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_joinUs" />
 
     <Button
-        android:id="@+id/btn_back2"
+        android:id="@+id/btn_idCheck"
         android:layout_width="139dp"
         android:layout_height="38dp"
         android:layout_marginTop="12dp"
@@ -184,10 +184,10 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/input_id2" />
+        app:layout_constraintTop_toBottomOf="@+id/join_id" />
 
     <Button
-        android:id="@+id/btn_join2"
+        android:id="@+id/btn_joinUs"
         android:layout_width="124dp"
         android:layout_height="42dp"
         android:background="@drawable/button_round"
@@ -212,13 +212,13 @@
         app:srcCompat="@drawable/logo_black_removebg" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/managerCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="관리자여부"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/input_pw5" />
+        app:layout_constraintTop_toBottomOf="@+id/join_aff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

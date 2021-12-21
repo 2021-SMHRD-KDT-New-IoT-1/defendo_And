@@ -66,7 +66,7 @@ public class joinActivity extends AppCompatActivity {
                 if(response.equals("1")){
                     Toast.makeText(joinActivity.this,"회원가입이 가능한 아이디 입니다.",Toast.LENGTH_SHORT).show();
                 }
-                else if(response.equals(("0"))){
+                else if(response.equals("0")){
                     Toast.makeText(joinActivity.this,"중복된 아이디 입니다.",Toast.LENGTH_SHORT).show();
                     join_id.setText("");
                 }

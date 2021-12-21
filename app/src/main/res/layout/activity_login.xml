@@ -1,57 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#ffb606"
-tools:context=".loginActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradation"
 
-    >
+    tools:context=".loginActivity">
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="356dp"
-    app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="356dp"
+        app:layout_constraintGuide_percent="0.9" />
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline3"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="66dp"
-    app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="66dp"
+        app:layout_constraintGuide_percent="0.1" />
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline4"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline6"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_percent="0.45" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline7"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_percent="0.85" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline8"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_percent="0.7852257" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7852257" />
 
     <EditText
         android:id="@+id/input_pw"
@@ -64,7 +63,7 @@ tools:context=".loginActivity"
         android:fontFamily="@font/sleigothic"
         android:hint="비밀번호를 입력하세요"
         android:inputType="textPersonName|textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="18dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -81,7 +80,7 @@ tools:context=".loginActivity"
         android:fontFamily="@font/sleigothic"
         android:hint="아이디를 입력하세요"
         android:inputType="textPersonName"
-        android:paddingLeft="10dp"
+        android:paddingLeft="18dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -90,15 +89,15 @@ tools:context=".loginActivity"
     <Button
         android:id="@+id/btn_login"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:backgroundTint="@drawable/gradation"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
         android:text="login"
         android:textColor="#ffb606"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -108,13 +107,17 @@ tools:context=".loginActivity"
     <Button
         android:id="@+id/btn_join"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_round"
+        android:background="@drawable/button_round_blank"
+
+        android:drawablePadding="-30dp"
         android:fontFamily="@font/sleigothic"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
         android:text="join us"
-        android:textColor="@color/prim"
-        android:textSize="16sp"
+        android:textColor="@color/light_white"
+        android:textSize="18sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -123,26 +126,40 @@ tools:context=".loginActivity"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"
         app:layout_constraintVertical_bias="0.0" />
 
-<ImageView
-    android:id="@+id/logo"
-    android:layout_width="396dp"
-    android:layout_height="101dp"
-    app:layout_constraintBottom_toTopOf="@+id/guideline6"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.466"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/guideline4"
-    app:layout_constraintVertical_bias="0.712"
-    app:srcCompat="@drawable/logo_black_removebg" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="396dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.712"
+        app:srcCompat="@drawable/logo_black_removebg" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="110dp"
         android:layout_height="46dp"
+        android:fontFamily="@font/sleigothic"
         android:text="자동 로그인"
+        android:textColor="@color/seco"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sleigothic"
+        android:text="Copyright ©2021 All rights reserved |  by defendo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@
             android:id="@+id/imageView"
             android:layout_width="171dp"
             android:layout_height="54dp"
-            tools:srcCompat="@drawable/logoblackremovebg" />
+            app:srcCompat="@drawable/logo_black_removebg" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"

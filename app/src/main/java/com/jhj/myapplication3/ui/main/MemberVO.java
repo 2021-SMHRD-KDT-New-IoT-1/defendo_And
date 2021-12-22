@@ -11,6 +11,7 @@ public class MemberVO implements Serializable {
     String worker_phone;
     Date worker_joindate;
     String admin_yesno;
+    //se
     public MemberVO(){}
 
     public MemberVO(String worker_id, String worker_pw, String worker_dept, String worker_name, String worker_phone, Date worker_joindate, String admin_yesno) {

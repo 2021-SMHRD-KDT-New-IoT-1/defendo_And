@@ -72,6 +72,7 @@
         android:hint="비밀번호를 입력하세요"
         android:inputType="textPersonName|textPassword"
         android:paddingLeft="18dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -89,8 +90,9 @@
         android:hint="아이디를 입력하세요"
         android:inputType="textPersonName"
         android:paddingLeft="18dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
@@ -102,7 +104,7 @@
         android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
-        android:text="login"
+        android:text="로그인"
         android:textAlignment="center"
         android:textColor="@color/light_white"
         android:textSize="18sp"
@@ -124,7 +126,7 @@
         android:fontFamily="@font/sleigothic"
         android:paddingLeft="0dp"
         android:paddingRight="0dp"
-        android:text="join us"
+        android:text="회원가입"
         android:textAlignment="center"
         android:textColor="@color/light_white"
         android:textSize="18sp"
@@ -161,8 +163,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.407" />
 
     <TextView
         android:id="@+id/textView"

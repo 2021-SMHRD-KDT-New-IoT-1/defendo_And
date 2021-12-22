@@ -4,7 +4,6 @@
         android:height="30dp"
         android:gravity="left"
         android:drawable="@drawable/nextdouble">
-        <solid android:color="@color/lightwhite"/>
         <padding android:bottom="3dp"
           android:right="-30dp"
            android:top="3dp"/>

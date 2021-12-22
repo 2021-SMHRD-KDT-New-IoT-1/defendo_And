@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/prim"
+    android:background="@drawable/gradation"
     tools:context=".joinActivity">
 
     <View
@@ -48,49 +48,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
 
     <EditText
         android:id="@+id/join_tel"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="전화번호를 입력하세요"
         android:inputType="textPersonName|textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/join_name" />
 
     <TextView
         android:id="@+id/join_title"
-        android:layout_width="136dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="125dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="@font/sleigothic"
-        android:text="join us"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textColor="@color/light_white"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toBottomOf="@+id/logo2" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/join_pw"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="비밀번호를 입력하세요"
         android:inputType="textPersonName|textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/btn_idCheck" />
@@ -99,14 +119,14 @@
         android:id="@+id/join_id"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="아이디를 입력하세요"
         android:inputType="textPersonName|textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
@@ -115,46 +135,43 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="이름을 입력하세요"
         android:inputType="textPersonName|textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/join_pw" />
 
     <Button
         android:id="@+id/btn_idCheck"
-        android:layout_width="139dp"
-        android:layout_height="38dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
         android:text="id check"
-        android:textColor="#ffb606"
-        android:textSize="16sp"
+        android:textColor="@color/light_white"
+        android:textSize="18sp"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
         app:layout_constraintTop_toBottomOf="@+id/join_id" />
 
     <Button
         android:id="@+id/btn_joinUs"
-        android:layout_width="139dp"
-        android:layout_height="38dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
         android:text="join"
-        android:textColor="#ffb606"
-        android:textSize="16sp"
+        android:textColor="@color/light_white"
+        android:textSize="18sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
@@ -162,61 +179,46 @@
 
     <Button
         android:id="@+id/btn_back"
-        android:layout_width="139dp"
-        android:layout_height="38dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:background="@drawable/button_round_blank"
+        android:backgroundTint="@color/prim"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
         android:text="back"
         android:textColor="#ffb606"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
         app:layout_constraintTop_toBottomOf="@+id/btn_joinUs" />
-
-    <ImageView
-        android:id="@+id/logo2"
-        android:layout_width="267dp"
-        android:layout_height="64dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_black_removebg" />
 
     <EditText
         android:id="@+id/join_aff"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="소속을 입력하세요"
         android:inputType="textPersonName|textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/join_tel" />
 
     <CheckBox
         android:id="@+id/managerCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
+        android:button="@drawable/admin_check"
         android:text="관리자 여부"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
         app:layout_constraintTop_toBottomOf="@+id/join_aff" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,29 @@
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="66dp"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="66dp"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,30 +59,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
 
     <View
         android:id="@+id/edit_view"
-        android:layout_width="wrap_content"
-        android:layout_height="599dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/box_round"
         android:backgroundTint="@color/light_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline30" />
 
     <TextView
         android:id="@+id/edit_title"
         android:layout_width="403dp"
         android:layout_height="50dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/sleigothic"
-        android:text="Edit personal information"
+        android:gravity="center"
+        android:text="개인 정보 수정"
+        android:textColor="@color/light_white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,19 +114,19 @@
 
     <Button
         android:id="@+id/btn_idcheck_edit"
-        android:layout_width="139dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
         android:text="id check"
-        android:textColor="#ffb606"
-        android:textSize="16sp"
+        android:textColor="@color/light_white"
+        android:textSize="18sp"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toBottomOf="@+id/edit_id" />
 
     <EditText
@@ -165,45 +197,46 @@
 
     <CheckBox
         android:id="@+id/checkBox_admin_edit"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:button="@drawable/admin_check"
+        android:fontFamily="@font/sleigothic"
+        android:gravity="center"
         android:text="관리자여부"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toBottomOf="@+id/edit_dept" />
 
     <Button
         android:id="@+id/btn_edit"
-        android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_round"
+        android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:text="저장"
-        android:textColor="@color/prim"
-        android:textSize="16sp"
+        android:textColor="@color/light_white"
+        android:textSize="18sp"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toBottomOf="@+id/checkBox_admin_edit" />
 
     <Button
         android:id="@+id/btn_back_edit"
-        android:layout_width="99dp"
-        android:layout_height="39dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:background="@drawable/button_round_blank"
+        android:backgroundTint="@color/prim"
         android:fontFamily="@font/sleigothic"
         android:text="back"
         android:textColor="#ffb606"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toBottomOf="@+id/btn_edit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

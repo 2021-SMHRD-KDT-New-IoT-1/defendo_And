@@ -7,37 +7,9 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/prim"
+    android:background="@drawable/gradation_white"
     tools:context=".MachineFragment">
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="609dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="653dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="58dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="354dp" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -54,76 +26,140 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_yellow_round_gradation"
+                app:layout_constraintBottom_toTopOf="@+id/guideline21"
+                app:layout_constraintEnd_toEndOf="@id/guideline23"
+                app:layout_constraintStart_toStartOf="@id/guideline22"
+                app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/box_yellow_round_gradation"
+                app:layout_constraintBottom_toTopOf="@+id/guideline25"
+                app:layout_constraintEnd_toStartOf="@+id/guideline23"
+                app:layout_constraintStart_toStartOf="@id/guideline22"
+                app:layout_constraintTop_toTopOf="@+id/guideline24" />
+
             <EditText
                 android:id="@+id/join_name"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:background="@drawable/button_round"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_focus"
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:fontFamily="@font/sleigothic"
-                android:hint="안전모ID를 입력하세요"
+                android:hint="수정할 안전모ID를 입력하세요"
                 android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                tools:layout_editor_absoluteX="58dp"
-                tools:layout_editor_absoluteY="442dp" />
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/m_title2" />
 
             <Button
                 android:id="@+id/btn_modify"
-                android:layout_width="197dp"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
-                android:background="@drawable/button_round"
-                android:backgroundTint="@color/seco"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_click"
                 android:fontFamily="@font/sleigothic"
                 android:onClick="onclick"
                 android:text="기기 수정"
-                android:textColor="#ffb606"
-                android:textSize="16sp"
+                android:textColor="@color/light_white"
+                android:textSize="18sp"
                 app:backgroundTint="@null"
-                tools:layout_editor_absoluteX="107dp"
-                tools:layout_editor_absoluteY="570dp" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/join_tel" />
 
             <TextView
                 android:id="@+id/m_title1"
                 android:layout_width="281dp"
                 android:layout_height="38dp"
+                android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/seco"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
                 android:text="기기 등록"
                 android:textSize="24sp"
-                tools:layout_editor_absoluteX="65dp"
-                tools:layout_editor_absoluteY="148dp" />
+                app:layout_constraintBottom_toTopOf="@+id/m_id"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
             <Button
                 android:id="@+id/btn_register"
-                android:layout_width="196dp"
+                android:layout_width="0dp"
                 android:layout_height="47dp"
-                android:background="@drawable/button_round"
-                android:backgroundTint="@color/seco"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_click"
                 android:fontFamily="@font/sleigothic"
                 android:onClick="onclick"
                 android:text="기기 등록"
-                android:textColor="#ffb606"
-                android:textSize="16sp"
+                android:textColor="@color/light_white"
+                android:textSize="18sp"
                 app:backgroundTint="@null"
-                tools:layout_editor_absoluteX="107dp"
-                tools:layout_editor_absoluteY="320dp" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/w_id" />
 
             <Button
                 android:id="@+id/btn_back_medit"
                 android:layout_width="133dp"
                 android:layout_height="43dp"
-                android:background="@drawable/button_round"
-                android:backgroundTint="@color/seco"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_round_blank"
+                android:backgroundTint="@color/prim"
                 android:fontFamily="@font/sleigothic"
                 android:onClick="onclick"
                 android:text="back"
                 android:textColor="#ffb606"
                 android:textSize="16sp"
                 app:backgroundTint="@null"
-                tools:layout_editor_absoluteX="139dp"
-                tools:layout_editor_absoluteY="630dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/btn_modify" />
 
             <TextView
                 android:id="@+id/m_title2"
@@ -134,57 +170,64 @@
                 android:gravity="center"
                 android:text="기기 정보 수정"
                 android:textSize="24sp"
-                tools:layout_editor_absoluteX="65dp"
-                tools:layout_editor_absoluteY="391dp" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                tools:layout_editor_absoluteY="406dp" />
 
             <EditText
                 android:id="@+id/m_id"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:background="@drawable/button_round"
+                android:background="@drawable/edittext_focus"
                 android:backgroundTint="@color/white"
                 android:clickable="false"
                 android:ems="10"
                 android:fontFamily="@font/sleigothic"
                 android:hint="안전모ID를 입력하세요"
                 android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                tools:layout_editor_absoluteX="58dp"
-                tools:layout_editor_absoluteY="196dp" />
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                tools:layout_editor_absoluteY="170dp" />
 
             <EditText
                 android:id="@+id/join_tel"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:background="@drawable/button_round"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_focus"
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:fontFamily="@font/sleigothic"
-                android:hint="근로자ID를 입력하세요"
+                android:hint="수정할 근로자ID를 입력하세요"
                 android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                tools:layout_editor_absoluteX="58dp"
-                tools:layout_editor_absoluteY="507dp" />
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/join_name" />
 
             <EditText
                 android:id="@+id/w_id"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:background="@drawable/button_round"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_focus"
                 android:backgroundTint="@color/white"
                 android:ems="10"
                 android:fontFamily="@font/sleigothic"
                 android:hint="근로자ID를 입력하세요"
                 android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                tools:layout_editor_absoluteX="58dp"
-                tools:layout_editor_absoluteY="258dp" />
+                android:paddingLeft="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/m_id" />
 
             <TextView
                 android:id="@+id/join_title"
                 android:layout_width="258dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="40dp"
                 android:backgroundTint="@color/seco"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
@@ -195,6 +238,27 @@
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.54" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

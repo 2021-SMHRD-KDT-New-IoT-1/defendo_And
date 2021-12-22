@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradation"
 
+    android:backgroundTint="@drawable/gradation"
     tools:context=".loginActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -29,7 +30,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -50,15 +58,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7852257" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <EditText
         android:id="@+id/input_pw"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
+        android:backgroundTint="@color/light_white"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
         android:hint="비밀번호를 입력하세요"
@@ -73,8 +81,8 @@
         android:id="@+id/input_id"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/edittext_focus"
+        android:backgroundTint="@color/light_white"
         android:clickable="false"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
@@ -91,12 +99,11 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@drawable/gradation"
+        android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
         android:text="login"
-        android:textColor="#ffb606"
+        android:textColor="@color/light_white"
         android:textSize="18sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -130,6 +137,7 @@
         android:id="@+id/logo"
         android:layout_width="396dp"
         android:layout_height="101dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -140,8 +148,9 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="110dp"
+        android:layout_width="133dp"
         android:layout_height="46dp"
+        android:button="@drawable/admin_check"
         android:fontFamily="@font/sleigothic"
         android:text="자동 로그인"
         android:textColor="@color/seco"
@@ -156,8 +165,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sleigothic"
-        android:text="Copyright ©2021 All rights reserved |  by defendo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:text="Copyright ©2021 All rights reserved ♥  by defendo"
+        android:textColor="@color/seco"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />

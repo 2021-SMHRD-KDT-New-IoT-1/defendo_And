@@ -10,58 +10,87 @@
 
     <View
         android:id="@+id/view3"
-        android:layout_width="399dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/prim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/box_yellow_round_gradation"
+        app:layout_constraintBottom_toTopOf="@+id/guideline32"
+        app:layout_constraintEnd_toStartOf="@+id/guideline26"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
     <Button
         android:id="@+id/btn_back_medit2"
         android:layout_width="133dp"
         android:layout_height="43dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/button_round"
-        android:backgroundTint="@color/seco"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/button_round_blank"
+        android:backgroundTint="@color/light_white"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
-        android:text="select"
-        android:textColor="#ffb606"
+        android:text="상세보기"
+        android:textColor="@color/light_white"
         android:textSize="16sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/tv_id"
         app:layout_constraintStart_toEndOf="@+id/tv_id"
-        app:layout_constraintTop_toTopOf="@+id/tv_id" />
+        app:layout_constraintTop_toTopOf="@+id/tv_id"
+        app:layout_constraintVertical_bias="0.65" />
 
     <ImageView
         android:id="@+id/img"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/profile_round"
-        android:backgroundTint="@color/prim"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/icon_circle"
         android:backgroundTintMode="@null"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/profile" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline32"
+        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintTop_toTopOf="@+id/guideline31"
+        tools:srcCompat="@drawable/worker" />
 
     <TextView
         android:id="@+id/tv_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/seco"
         android:fontFamily="@font/sleigothic"
-        android:text="근로자이름"
-        android:textColor="#877764"
+        android:gravity="center"
+        android:text="김찬욱 근로자님"
+        android:textColor="@color/seco"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline32"
         app:layout_constraintStart_toEndOf="@+id/img"
-        app:layout_constraintTop_toTopOf="@+id/img" />
+        app:layout_constraintTop_toTopOf="@+id/guideline31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

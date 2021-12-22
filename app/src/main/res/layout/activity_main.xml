@@ -28,8 +28,7 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/gradation_white"
-            android:backgroundTint="@color/prim" />
+            android:background="@drawable/gradation_white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

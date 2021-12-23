@@ -41,13 +41,6 @@
         app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,14 +52,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <View
         android:id="@+id/edit_view"
@@ -80,11 +73,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline30" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
     <TextView
         android:id="@+id/edit_title"
         android:layout_width="403dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/sleigothic"
         android:gravity="center"
         android:text="개인 정보 수정"
@@ -106,7 +106,8 @@
         android:fontFamily="@font/sleigothic"
         android:hint="수정할 아이디를 입력하세요"
         android:inputType="textPersonName"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
@@ -117,11 +118,11 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_round_blank"
+        android:background="@drawable/box_yellow_round_gradation"
         android:fontFamily="@font/sleigothic"
         android:onClick="onclick"
-        android:text="id check"
-        android:textColor="@color/prim"
+        android:text="id 중복체크"
+        android:textColor="@color/light_white"
         android:textSize="18sp"
         app:backgroundTint="@color/prim"
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
@@ -140,11 +141,28 @@
         android:fontFamily="@font/sleigothic"
         android:hint="수정할 비밀번호를 입력하세요"
         android:inputType="textPassword"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/btn_idcheck_edit" />
+
+    <EditText
+        android:id="@+id/join_pw3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_focus"
+        android:ems="10"
+        android:fontFamily="@font/sleigothic"
+        android:hint="수정할 비밀번호를 다시 한번 입력하세요"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pw" />
 
     <EditText
         android:id="@+id/edit_name"
@@ -157,10 +175,12 @@
         android:fontFamily="@font/sleigothic"
         android:hint="수정할 이름을 입력하세요"
         android:inputType="textPersonName"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pw" />
+        app:layout_constraintTop_toBottomOf="@+id/join_pw3" />
 
     <EditText
         android:id="@+id/edit_tel"
@@ -173,7 +193,8 @@
         android:fontFamily="@font/sleigothic"
         android:hint="수정할 전화번호를 입력하세요"
         android:inputType="textPersonName|phone"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
@@ -190,29 +211,16 @@
         android:fontFamily="@font/sleigothic"
         android:hint="수정할 소속을 입력하세요"
         android:inputType="textPersonName"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/edit_tel" />
-
-    <CheckBox
-        android:id="@+id/checkBox_admin_edit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:button="@drawable/admin_check"
-        android:fontFamily="@font/sleigothic"
-        android:gravity="center"
-        android:text="관리자여부"
-        app:layout_constraintEnd_toStartOf="@+id/guideline28"
-        app:layout_constraintStart_toStartOf="@+id/guideline29"
-        app:layout_constraintTop_toBottomOf="@+id/edit_dept" />
 
     <Button
         android:id="@+id/btn_edit"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="15dp"
         android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
         android:text="저장"
@@ -221,22 +229,20 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_admin_edit" />
+        tools:layout_editor_absoluteY="585dp" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_back_edit"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/button_round_blank"
-        android:backgroundTint="@color/prim"
+        android:background="@drawable/button_round_gradation_n"
         android:fontFamily="@font/sleigothic"
-        android:text="back"
+        android:text="뒤로가기"
         android:textColor="#ffb606"
         android:textSize="18sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit" />
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

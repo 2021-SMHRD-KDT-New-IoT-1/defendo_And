@@ -34,15 +34,14 @@ public class MachineFragment extends Fragment {
 
         join_view = v.findViewById(R.id.join_view);
         join_title = v.findViewById(R.id.join_title);
-        m_title1 = v.findViewById(R.id.m_title1);
         m_id = v.findViewById(R.id.m_id);
         w_id = v.findViewById(R.id.w_id);
         btn_register = v.findViewById(R.id.btn_register);
-        m_title2 = v.findViewById(R.id.m_title2);
+        m_title2 = v.findViewById(R.id.trans_edit);
         edit_mid = v.findViewById(R.id.join_name);
         edit_wid = v.findViewById(R.id.join_tel);
-        btn_modify = v.findViewById(R.id.btn_modify);
-        btn_back_medit = v.findViewById(R.id.btn_back_medit);
+
+
 
 
 

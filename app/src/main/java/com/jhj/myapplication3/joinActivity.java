@@ -53,7 +53,7 @@ public class joinActivity extends AppCompatActivity {
         btn_joinUs = findViewById(R.id.btn_joinUs);
         btn_back = findViewById(R.id.btn_back);
 
-        managerCheck = findViewById(R.id.managerCheck);
+
 
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());

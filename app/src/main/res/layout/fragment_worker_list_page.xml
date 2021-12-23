@@ -115,15 +115,34 @@
         android:textColor="@color/light_white"
         android:textSize="16sp"
         app:backgroundTint="@null"
+
         app:layout_constraintBottom_toBottomOf="@+id/tv_id"
         app:layout_constraintEnd_toStartOf="@+id/guideline44"
         app:layout_constraintStart_toEndOf="@+id/tv_id"
         app:layout_constraintTop_toTopOf="@+id/tv_id"
         app:layout_constraintVertical_bias="0.55" />
 
+    <TextView
+        android:id="@+id/tv_id4"
+        android:layout_width="227dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/sleigothic"
+        android:gravity="center"
+        android:text="12월 23일 오후 3시 32분"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline24"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline52"
         app:layout_constraintEnd_toStartOf="@+id/guideline51"
         app:layout_constraintStart_toStartOf="@+id/guideline50"
@@ -133,19 +152,21 @@
             android:layout_width="wrap_content"
             android:layout_height="10dp"
             android:layout_marginTop="10dp"
-            android:background="@color/prim">
+            android:background="@drawable/box_round"
+            android:backgroundTint="@color/prim"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/tv_id2"
-                android:layout_width="136dp"
+                android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
                 android:text="안전모 잠금 여부"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_id3"
@@ -156,35 +177,35 @@
                 android:gravity="center"
                 android:text="안전교육 수료 여부"
                 android:textColor="@color/seco"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            android:layout_marginTop="10dp">
+            android:background="@drawable/workerlist_blank_yellow"
+            android:backgroundTint="@color/prim">
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/prim"
                 android:drawableTop="@drawable/icon_size_happay"
                 android:drawablePadding="5dp"
-                android:padding="20dp"
+                android:paddingTop="10dp"
                 app:drawableTint="@color/prim" />
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/prim"
                 android:drawableTop="@drawable/icon_size_shock"
                 android:drawablePadding="5dp"
-                android:padding="20dp" />
+                android:paddingTop="10dp" />
 
         </TableRow>
 
@@ -337,7 +358,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.27" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline48"

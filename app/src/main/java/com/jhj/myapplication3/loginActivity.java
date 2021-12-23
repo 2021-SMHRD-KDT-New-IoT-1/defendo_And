@@ -62,14 +62,10 @@ public class loginActivity extends AppCompatActivity {
         stringRequest = new StringRequest(Request.Method.POST, login_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                try {
                     MemberVO vo = gson.fromJson(response,MemberVO.class);
                     Intent intent = new Intent(loginActivity.this, AllWorkerFragment.class);
                     intent.putExtra("MemberVO",vo);
                     startActivity(intent);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
             }
         }, new Response.ErrorListener() {
             @Override

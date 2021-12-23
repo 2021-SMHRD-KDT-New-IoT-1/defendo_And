@@ -58,15 +58,15 @@ public class joinActivity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        String id_check = "절대경로 확인요";
+        String id_check = "http://59.0.147.241:8085/project_dependo/AndroidIdCheck";
 
         stringRequest = new StringRequest(Request.Method.POST, id_check, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(response.equals("1")){
+                if(response.equals("false")){
                     Toast.makeText(joinActivity.this,"회원가입이 가능한 아이디 입니다.",Toast.LENGTH_SHORT).show();
                 }
-                else if(response.equals("0")){
+                else if(response.equals("true")){
                     Toast.makeText(joinActivity.this,"중복된 아이디 입니다.",Toast.LENGTH_SHORT).show();
                     join_id.setText("");
                 }

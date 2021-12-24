@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradation"
-
-    android:backgroundTint="@drawable/gradation"
     tools:context=".loginActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -103,7 +101,6 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/button_click"
         android:fontFamily="@font/sleigothic"
-        android:onClick="onclick"
         android:text="로그인"
         android:textAlignment="center"
         android:textColor="@color/light_white"

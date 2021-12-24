@@ -57,14 +57,15 @@ public class loginActivity extends AppCompatActivity {
 
         gson=new Gson().newBuilder().create();
 
-        String login_url="http://59.0.147.241:8085/project_dependo/Login";
+        String login_url="http://59.0.147.241:8085/project_dependo/AndroidLogin";
 
         stringRequest = new StringRequest(Request.Method.POST, login_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                //Toast.makeText(getApplicationContext(),response,Toast.LENGTH_SHORT).show();
                     MemberVO vo = gson.fromJson(response,MemberVO.class);
-                    Intent intent = new Intent(loginActivity.this, AllWorkerFragment.class);
-                    intent.putExtra("MemberVO",vo);
+                    Intent intent = new Intent(loginActivity.this, MainActivity.class);
+                    intent.putExtra("VO",vo);
                     startActivity(intent);
             }
         }, new Response.ErrorListener() {

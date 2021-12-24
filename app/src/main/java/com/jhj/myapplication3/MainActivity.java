@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.jhj.myapplication3.ui.main.MemberVO;
 import com.jhj.myapplication3.ui.main.SectionsPagerAdapter;
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        MemberVO vo = (MemberVO)getIntent().getSerializableExtra("VO");
+        MemberVO vo = (MemberVO) getIntent().getSerializableExtra("VO");
+//        Toast.makeText(getApplicationContext(),vo.getWorker_id(),Toast.LENGTH_SHORT).show();
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(),vo);
         ViewPager viewPager = binding.viewPager;

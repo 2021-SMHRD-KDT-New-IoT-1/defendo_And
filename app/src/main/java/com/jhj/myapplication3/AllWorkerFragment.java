@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -39,7 +40,8 @@ public class AllWorkerFragment extends Fragment {
     private ArrayList<ListVO> al = new ArrayList<>();
     RequestQueue requestQueue;
     StringRequest stringRequest;
-    int i;
+    JSONArray jsonArray;
+    int i=0;
 
 
     @Override
@@ -49,41 +51,48 @@ public class AllWorkerFragment extends Fragment {
 
         requestQueue = Volley.newRequestQueue(getContext());
         listview_worker = v.findViewById(R.id.listview_worker);
-
         String dept = getArguments().getString("dept");
-
         Gson gson = new Gson();
-        ChatAdapter adapter = new ChatAdapter(getContext(), R.layout.all_worker_list, al);
-        listview_worker.setAdapter(adapter);
 
-        String select_url="http://59.0.147.241:8085/project_dependo/AndroidSelectAll";
+
+
+
+        String select_url = "http://59.0.147.241:8085/project_dependo/AndroidSelectAll";
         stringRequest = new StringRequest(Request.Method.POST, select_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Toast.makeText(getContext(),response,Toast.LENGTH_SHORT).show();
+
                 try {
-                    JSONArray jsonArray = new JSONArray(response);
-                    for(; i<jsonArray.length(); i++){
+                    jsonArray = new JSONArray(response);
+                    for (; i < jsonArray.length(); i++) {
                         al.add(gson.fromJson(jsonArray.get(i).toString(),ListVO.class));
                     }
+                    ChatAdapter adapter = new ChatAdapter(getContext(), R.layout.all_worker_list, al);
+                    listview_worker.setAdapter(adapter);
                 } catch (JSONException jsonException) {
                     jsonException.printStackTrace();
                 }
+
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
 
             }
-        }){
+        }) {
             @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String,String> params = new HashMap<>();
-                params.put("dept",dept);
+                HashMap<String, String> params = new HashMap<>();
+                params.put("dept", dept);
                 return params;
             }
         };
         requestQueue.add(stringRequest);
+
+
         return v;
     }
 }

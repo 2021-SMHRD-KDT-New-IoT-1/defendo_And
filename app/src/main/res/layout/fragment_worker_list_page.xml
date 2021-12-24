@@ -36,11 +36,11 @@
         android:layout_height="32dp"
         android:background="@drawable/ic_arrow_forward"
         android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit"
+        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit"
         app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_medit2"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_medit2" />
+        app:layout_constraintStart_toStartOf="@+id/btn_back_medit"
+        app:layout_constraintTop_toTopOf="@+id/btn_back_medit" />
 
     <View
         android:id="@+id/view3"
@@ -212,7 +212,7 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/btn_back_medit2"
+        android:id="@+id/btn_back_medit"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:background="@drawable/button_round_blank"
@@ -237,11 +237,11 @@
         android:layout_height="25dp"
         android:background="@drawable/edit"
         android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit"
+        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit"
         app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_medit2"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_medit2" />
+        app:layout_constraintStart_toStartOf="@+id/btn_back_medit"
+        app:layout_constraintTop_toTopOf="@+id/btn_back_medit" />
 
     <TextView
         android:id="@+id/textView3"
@@ -275,7 +275,7 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/guideline24"
         app:layout_constraintStart_toStartOf="@+id/guideline21"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back_medit2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_back_medit" />
 
     <ImageView
         android:id="@+id/img"

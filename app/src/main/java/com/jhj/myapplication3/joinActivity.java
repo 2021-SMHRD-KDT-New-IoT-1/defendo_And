@@ -94,10 +94,11 @@ public class joinActivity extends AppCompatActivity {
             }
         });
 
-        String join = "회원가입";
+        String join = "http://59.0.147.241:8085/project_dependo/AndroidJoin";
         stringRequest2 = new StringRequest(Request.Method.POST, join, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Toast.makeText(joinActivity.this,response,Toast.LENGTH_SHORT).show();
                 if(response.equals("1")){
                     Toast.makeText(joinActivity.this,"회원가입성공",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(joinActivity.this,loginActivity.class);

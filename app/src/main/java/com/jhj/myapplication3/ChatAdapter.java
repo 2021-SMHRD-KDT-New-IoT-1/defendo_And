@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jhj.myapplication3.ui.main.ListVO;
 
@@ -42,16 +43,11 @@ public class ChatAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // ============================================항목당 한번씩 일어나는 일~!
-        // - ArrayList<ChatVO>에 저장되어 있는 데이터로 View로 바뀐 템플릿을 꾸민다!
-        // - ListView에 추가한다~~
-        if (convertView ==null ){ //이전에 inflate된 항목 뷰가 없다면~~
+
+        if (convertView ==null ){
             convertView = inflater.inflate(layout, parent, false);
         }
-        // 아직 안꾸밈 ~
 
-        //템플릿을 View로 만들어서 저장해둔 객체인 convertView 안에서 찾겠다~
-        // 템플릿에서 찾겠다!!
         TextView tv_id = convertView.findViewById(R.id.tv_id);
         tv_id.setText(al.get(position).getWorker_id());
         ImageView imageView = convertView.findViewById(R.id.img);

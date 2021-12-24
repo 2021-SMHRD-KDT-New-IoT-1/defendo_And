@@ -34,8 +34,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new AllWorkerFragment();
                 String dept = vo.getWorker_dept();
+                fragment = new AllWorkerFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("dept",dept);
                 fragment.setArguments(bundle);

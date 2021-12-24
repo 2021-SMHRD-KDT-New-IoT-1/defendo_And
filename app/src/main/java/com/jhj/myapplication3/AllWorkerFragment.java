@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class AllWorkerFragment extends Fragment {
     private TextView worker_title;
     private ListView listview_worker;
     private ArrayList<ListVO> al = new ArrayList<>();
+    private Button btn_back_medit;
     RequestQueue requestQueue;
     StringRequest stringRequest;
     JSONArray jsonArray;
@@ -51,6 +53,7 @@ public class AllWorkerFragment extends Fragment {
 
         requestQueue = Volley.newRequestQueue(getContext());
         listview_worker = v.findViewById(R.id.listview_worker);
+
         String dept = getArguments().getString("dept");
         Gson gson = new Gson();
 

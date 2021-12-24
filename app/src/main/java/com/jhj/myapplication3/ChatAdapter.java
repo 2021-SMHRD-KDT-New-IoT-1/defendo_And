@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +53,13 @@ public class ChatAdapter extends BaseAdapter {
         tv_id.setText(al.get(position).getWorker_id());
         ImageView imageView = convertView.findViewById(R.id.img);
         imageView.setImageResource(R.drawable.worker_icon);
+        Button btn_back_medit =convertView.findViewById(R.id.btn_back_medit);
+        btn_back_medit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         return convertView;
     }

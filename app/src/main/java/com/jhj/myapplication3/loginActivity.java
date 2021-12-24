@@ -55,7 +55,7 @@ public class loginActivity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        gson=new Gson().newBuilder().create();
+        gson=new Gson();
 
         String login_url="http://59.0.147.241:8085/project_dependo/AndroidLogin";
 

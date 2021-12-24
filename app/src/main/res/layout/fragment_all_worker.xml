@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.2" />
+                app:layout_constraintGuide_percent="0.16" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline37"
@@ -88,7 +88,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/guideline5"
-                tools:layout_editor_absoluteY="731dp" />
+                tools:layout_editor_absoluteY="731dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

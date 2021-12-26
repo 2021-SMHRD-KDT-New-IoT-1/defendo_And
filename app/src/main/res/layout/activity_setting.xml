@@ -212,7 +212,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:fontFamily="@font/sleigothic"
-        android:gravity="center"
+
         android:paddingLeft="60dp"
         android:text="개인정보 수정"
         android:textAlignment="textStart"
@@ -229,7 +229,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:fontFamily="@font/sleigothic"
-        android:gravity="center"
+
         android:paddingLeft="60dp"
         android:text="로그아웃"
         android:textAlignment="viewStart"

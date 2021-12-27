@@ -81,7 +81,7 @@
         android:id="@+id/join_tel"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
@@ -90,6 +90,7 @@
         android:paddingLeft="16dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/join_name" />
 
@@ -160,7 +161,7 @@
         android:id="@+id/join_name"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
@@ -200,10 +201,10 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/guideline42"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/join_aff"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <android.widget.Button
         android:id="@+id/btn_back"
@@ -224,7 +225,7 @@
         android:id="@+id/join_aff"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edittext_focus"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
@@ -233,7 +234,18 @@
         android:paddingLeft="16dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/join_tel" />
+
+    <TextView
+        android:id="@+id/check_pw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toBottomOf="@+id/join_pw2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

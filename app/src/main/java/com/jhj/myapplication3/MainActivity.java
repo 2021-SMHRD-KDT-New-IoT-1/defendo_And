@@ -1,5 +1,6 @@
 package com.jhj.myapplication3;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private MachineFragment fragment1;
     private Machine2_Fragment fragment2;
+    private Button btn_setup;
     //hello
     //hello my name is csm
     //my name is jsh
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         MemberVO vo = (MemberVO) getIntent().getSerializableExtra("VO");
-//        Toast.makeText(getApplicationContext(),vo.getWorker_id(),Toast.LENGTH_SHORT).show();
+        btn_setup = findViewById(R.id.btn_setup);
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(),vo);
         ViewPager viewPager = binding.viewPager;
@@ -47,5 +50,15 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
 
+        btn_setup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,settingActivity.class);
+                intent.putExtra("id",vo.getWorker_id());
+                startActivity(intent);
+            }
+        });
+
     }
+
 }

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/light_white">
+    android:backgroundTint="@color/light_white"
+    android:descendantFocusability="blocksDescendants">
 
 
     <View
@@ -21,14 +22,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_back_medit"
+        android:id="@+id/btn_modify2"
         android:layout_width="133dp"
         android:layout_height="43dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/button_round_blank"
         android:backgroundTint="@color/light_white"
         android:fontFamily="@font/sleigothic"
-        android:onClick="onclick"
         android:paddingLeft="19dp"
         android:paddingTop="5dp"
         android:text="상세보기"
@@ -76,11 +76,11 @@
         android:layout_height="32dp"
         android:background="@drawable/ic_arrow_forward"
         android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_modify2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_modify2"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_medit"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_medit"
+        app:layout_constraintStart_toStartOf="@+id/btn_modify2"
+        app:layout_constraintTop_toTopOf="@+id/btn_modify2"
         app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,15 +4,13 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -22,7 +20,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.jhj.myapplication3.ui.main.ListVO;
 
 import org.json.JSONArray;
@@ -33,13 +30,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class AllWorkerFragment extends Fragment {
+public class AllWorkerFragment extends Fragment{
 
-    private View worker_view;
-    private TextView worker_title;
+
     private ListView listview_worker;
     private ArrayList<ListVO> al = new ArrayList<>();
-    private Button btn_back_medit;
     RequestQueue requestQueue;
     StringRequest stringRequest;
     JSONArray jsonArray;
@@ -49,6 +44,10 @@ public class AllWorkerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        ft.detach(this).attach(this).commit();
+
         View v = inflater.inflate(R.layout.fragment_all_worker, container, false);
 
         requestQueue = Volley.newRequestQueue(getContext());
@@ -57,14 +56,10 @@ public class AllWorkerFragment extends Fragment {
         String dept = getArguments().getString("dept");
         Gson gson = new Gson();
 
-
-
-
         String select_url = "http://59.0.147.241:8085/project_dependo/AndroidSelectAll";
         stringRequest = new StringRequest(Request.Method.POST, select_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(getContext(),response,Toast.LENGTH_SHORT).show();
 
                 try {
                     jsonArray = new JSONArray(response);
@@ -73,6 +68,13 @@ public class AllWorkerFragment extends Fragment {
                     }
                     ChatAdapter adapter = new ChatAdapter(getContext(), R.layout.all_worker_list, al);
                     listview_worker.setAdapter(adapter);
+//                    listview_worker.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                        @Override
+//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                            Log.v("TAG","HI");
+//                        }
+//                    });
+
                 } catch (JSONException jsonException) {
                     jsonException.printStackTrace();
                 }
@@ -94,6 +96,27 @@ public class AllWorkerFragment extends Fragment {
             }
         };
         requestQueue.add(stringRequest);
+
+
+        listview_worker.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                parent.getItemAtPosition(position);
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                worker_list_pageFragment fm = new worker_list_pageFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("id", al.get(position).getWorker_id());
+                fm.setArguments(bundle);
+                transaction.replace(R.id.list_frame, fm);
+                transaction.commit();
+            }
+        });
+
+
+
+
+
+
 
 
         return v;

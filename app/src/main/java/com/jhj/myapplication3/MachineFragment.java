@@ -31,7 +31,6 @@ public class MachineFragment extends Fragment {
     private EditText w_id;
     private Button btn_register;
     private Button btn_mc_update;
-    private FragmentTransaction fragmentTransaction;
 
     Gson gson;
 

@@ -113,28 +113,11 @@ tools:context=".worker_edit_Fragment">
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
-<Button
-    android:id="@+id/btn_idcheck_edit"
-    android:layout_width="0dp"
-    android:layout_height="40dp"
-    android:layout_marginTop="15dp"
-    android:background="@drawable/box_yellow_round_gradation"
-    android:fontFamily="@font/sleigothic"
-    android:onClick="onclick"
-    android:text="id 중복체크"
-    android:textColor="@color/light_white"
-    android:textSize="18sp"
-    app:backgroundTint="@color/prim"
-    app:layout_constraintEnd_toStartOf="@+id/guideline28"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="@+id/guideline29"
-    app:layout_constraintTop_toBottomOf="@+id/edit_id" />
-
     <EditText
         android:id="@+id/edit_pw"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/edittext_focus"
         android:backgroundTint="@color/white"
         android:ems="10"
@@ -144,12 +127,12 @@ tools:context=".worker_edit_Fragment">
         android:paddingLeft="15dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/btn_idcheck_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_id" />
 
     <EditText
-        android:id="@+id/join_pw3"
+        android:id="@+id/edit_pw2"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
@@ -168,7 +151,7 @@ tools:context=".worker_edit_Fragment">
         android:id="@+id/edit_name"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/edittext_focus"
         android:backgroundTint="@color/white"
         android:ems="10"
@@ -178,9 +161,9 @@ tools:context=".worker_edit_Fragment">
         android:paddingLeft="15dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/join_pw3" />
+        app:layout_constraintTop_toBottomOf="@+id/pw_check" />
 
     <EditText
         android:id="@+id/edit_tel"
@@ -196,7 +179,7 @@ tools:context=".worker_edit_Fragment">
         android:paddingLeft="15dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/edit_name" />
 
@@ -244,5 +227,17 @@ tools:context=".worker_edit_Fragment">
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
+
+    <TextView
+        android:id="@+id/pw_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sleigothic"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pw2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

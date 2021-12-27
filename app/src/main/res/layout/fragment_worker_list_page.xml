@@ -3,6 +3,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/light_white"
@@ -50,11 +51,11 @@
         android:layout_height="32dp"
         android:background="@drawable/ic_arrow_forward"
         android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_modify_list"
+        app:layout_constraintEnd_toEndOf="@+id/btn_modify_list"
         app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_medit2"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_medit2" />
+        app:layout_constraintStart_toStartOf="@+id/btn_modify_list"
+        app:layout_constraintTop_toTopOf="@+id/btn_modify_list" />
 
     <View
         android:id="@+id/view3"
@@ -76,7 +77,6 @@
         android:backgroundTint="@color/seco"
         android:fontFamily="@font/sleigothic"
         android:gravity="center"
-        android:text="김찬욱 근로자님"
         android:textColor="@color/seco"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -89,29 +89,29 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:alpha="0.5"
         android:background="@drawable/box_yellow_round_gradation_30dp"
-        android:backgroundTint="@color/light_white"
 
+        android:backgroundTint="@color/light_white"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
         app:layout_constraintEnd_toStartOf="@+id/guideline44"
         app:layout_constraintStart_toStartOf="@+id/guideline43"
         app:layout_constraintTop_toTopOf="@+id/guideline45"
-        app:layout_constraintVertical_bias="0.413"
-        android:alpha="0.5"/>
+        app:layout_constraintVertical_bias="0.413" />
 
     <View
 
         android:id="@+id/view5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:alpha="0.5"
         android:background="@drawable/box_yellow_round_gradation_30dp"
-        android:backgroundTint="@color/light_white"
 
+        android:backgroundTint="@color/light_white"
         app:layout_constraintBottom_toTopOf="@+id/guideline41"
         app:layout_constraintEnd_toStartOf="@+id/guideline44"
         app:layout_constraintStart_toStartOf="@+id/guideline43"
-        app:layout_constraintTop_toTopOf="@+id/guideline48"
-        android:alpha="0.5"/>
+        app:layout_constraintTop_toTopOf="@+id/guideline48" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -162,7 +162,7 @@
             android:backgroundTint="@color/prim">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/isLock"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -173,7 +173,7 @@
                 app:drawableTint="@color/prim" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/education_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -186,14 +186,13 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/tv_id4"
+        android:id="@+id/tv_date"
         android:layout_width="102dp"
         android:layout_height="36dp"
         android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:fontFamily="@font/sleigothic"
         android:gravity="center"
-        android:text="12월 23일"
         android:textColor="@color/seco"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline24"
@@ -243,13 +242,12 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tv_id7"
+                android:id="@+id/tv_tel"
                 android:layout_width="102dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
-                android:text="010-0000-0000"
                 android:textColor="@color/seco"
                 android:textSize="20sp" />
         </TableRow>
@@ -271,13 +269,12 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tv_id8"
+                android:id="@+id/tv_dept"
                 android:layout_width="102dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
-                android:text="스마트인재개발원"
                 android:textColor="@color/seco"
                 android:textSize="20sp" />
         </TableRow>
@@ -303,24 +300,22 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/tv_id9"
+                    android:id="@+id/tv_hell"
                     android:layout_width="102dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/sleigothic"
                     android:gravity="center"
-                    android:text="09:00"
                     android:textColor="@color/seco"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/tv_id10"
+                    android:id="@+id/tv_heaven"
                     android:layout_width="102dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/sleigothic"
                     android:gravity="center"
-                    android:text="18:00"
                     android:textColor="@color/seco"
                     android:textSize="20sp" />
             </TableRow>
@@ -330,7 +325,7 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/btn_back_medit2"
+        android:id="@+id/btn_modify_list"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:background="@drawable/button_round_blank"
@@ -433,7 +428,7 @@
             android:layout_height="60dp">
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/sunday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
@@ -441,44 +436,40 @@
                 android:background="@drawable/smallbox_yellow"
                 android:backgroundTint="@color/gray"
                 android:fontFamily="@font/sleigothic"
-                android:gravity="center"
-                android:text="19일" />
+                android:gravity="center" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/monday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
                 android:layout_weight="1"
                 android:background="@drawable/smallbox_yellow"
                 android:fontFamily="@font/sleigothic"
-                android:gravity="center"
-                android:text="20일" />
+                android:gravity="center" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/tuesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
                 android:layout_weight="1"
                 android:background="@drawable/smallbox_yellow"
                 android:fontFamily="@font/sleigothic"
-                android:gravity="center"
-                android:text="21일" />
+                android:gravity="center" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/wendsday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
                 android:layout_weight="1"
                 android:background="@drawable/smallbox_yellow"
                 android:fontFamily="@font/sleigothic"
-                android:gravity="center"
-                android:text="22일" />
+                android:gravity="center" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/thursday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
@@ -487,11 +478,10 @@
                 android:backgroundTint="@color/seco"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
-                android:text="23일"
                 android:textColor="@color/light_white" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/friday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
@@ -500,11 +490,10 @@
                 android:backgroundTint="@color/seco"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
-                android:text="24일"
                 android:textColor="@color/light_white" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/saturday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2.5dp"
@@ -512,8 +501,7 @@
                 android:background="@drawable/smallbox_yellow"
                 android:backgroundTint="@color/gray"
                 android:fontFamily="@font/sleigothic"
-                android:gravity="center"
-                android:text="25일" />
+                android:gravity="center" />
         </TableRow>
 
     </TableLayout>
@@ -524,11 +512,11 @@
         android:layout_height="25dp"
         android:background="@drawable/edit"
         android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_modify_list"
+        app:layout_constraintEnd_toEndOf="@+id/btn_modify_list"
         app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_medit2"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_medit2" />
+        app:layout_constraintStart_toStartOf="@+id/btn_modify_list"
+        app:layout_constraintTop_toTopOf="@+id/btn_modify_list" />
 
     <TextView
         android:id="@+id/textView3"
@@ -537,21 +525,20 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/sadface"
         android:backgroundTint="@color/seco"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back_medit5"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back_medit5"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_remove_list"
+        app:layout_constraintEnd_toEndOf="@+id/btn_remove_list"
         app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_medit5"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_medit5"
+        app:layout_constraintStart_toStartOf="@+id/btn_remove_list"
+        app:layout_constraintTop_toTopOf="@+id/btn_remove_list"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btn_back_medit5"
+        android:id="@+id/btn_remove_list"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:background="@drawable/button_round_blank"
         android:backgroundTint="@color/seco"
         android:fontFamily="@font/sleigothic"
-        android:onClick="onclick"
         android:paddingLeft="19dp"
         android:paddingTop="5dp"
         android:text="삭제"
@@ -578,6 +565,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline20"
         app:layout_constraintTop_toTopOf="@+id/guideline31"
         app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/worker_icon"
         tools:srcCompat="@drawable/worker_icon" />
 
     <androidx.constraintlayout.widget.Guideline

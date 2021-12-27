@@ -12,7 +12,7 @@
     <color name="light_white">#F1F1FA</color>
     <color name="orange">#f7971e</color>
     <color name="purple_black">#403B4A</color>
-    <color name="transfer">#FF0000000</color>
+    <color name="transfer">#FF000000</color>
     <color name="gray">#AAA7A0</color>
 
 </resources>

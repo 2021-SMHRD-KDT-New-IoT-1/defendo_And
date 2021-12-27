@@ -11,8 +11,11 @@ public class MemberVO implements Serializable {
     String worker_phone;
     String worker_joindate;
     String admin_yesno;
+    String education;
+
     //se
-    public MemberVO(){}
+    public MemberVO() {
+    }
 
     public MemberVO(String worker_id, String worker_pw, String worker_dept, String worker_name, String worker_phone, String worker_joindate, String admin_yesno) {
         this.worker_id = worker_id;
@@ -22,6 +25,18 @@ public class MemberVO implements Serializable {
         this.worker_phone = worker_phone;
         this.worker_joindate = worker_joindate;
         this.admin_yesno = admin_yesno;
+    }
+
+
+    public MemberVO(String worker_id, String worker_pw, String worker_dept, String worker_name, String worker_phone, String worker_joindate, String admin_yesno, String education) {
+        this.worker_id = worker_id;
+        this.worker_pw = worker_pw;
+        this.worker_dept = worker_dept;
+        this.worker_name = worker_name;
+        this.worker_phone = worker_phone;
+        this.worker_joindate = worker_joindate;
+        this.admin_yesno = admin_yesno;
+        this.education = education;
     }
 
     public String getWorker_id() {
@@ -51,4 +66,9 @@ public class MemberVO implements Serializable {
     public String getAdmin_yesno() {
         return admin_yesno;
     }
+
+    public String getEducation() {
+        return education;
+    }
+
 }

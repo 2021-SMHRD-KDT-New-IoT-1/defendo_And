@@ -1,6 +1,8 @@
 package com.jhj.myapplication3;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.jhj.myapplication3.ui.main.ListVO;
 
@@ -20,13 +25,14 @@ public class ChatAdapter extends BaseAdapter {
     private int layout; // 템플릿의 id
     private ArrayList<ListVO> al; //꾸밀 데이터
 
-    public ChatAdapter(Context context, int layout, ArrayList<ListVO> al){
-        this.context=context;
+    public ChatAdapter(Context context, int layout, ArrayList<ListVO> al) {
+        this.context = context;
         this.layout = layout;
         this.al = al;
 
-        this.inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
     @Override
     public int getCount() { // 리스트뷰 항목 개수 지정
         return al.size();
@@ -45,7 +51,7 @@ public class ChatAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if (convertView ==null ){
+        if (convertView == null) {
             convertView = inflater.inflate(layout, parent, false);
         }
 
@@ -53,16 +59,18 @@ public class ChatAdapter extends BaseAdapter {
         tv_id.setText(al.get(position).getWorker_id());
         ImageView imageView = convertView.findViewById(R.id.img);
         imageView.setImageResource(R.drawable.worker_icon);
-        Button btn_back_medit =convertView.findViewById(R.id.btn_back_medit);
-        btn_back_medit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
+        Button btn_modify2= convertView.findViewById(R.id.btn_modify2);
+//        btn_modify2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//
+//            }
+//        });
         return convertView;
     }
+
 
 
 }

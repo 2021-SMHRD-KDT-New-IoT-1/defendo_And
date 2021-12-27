@@ -63,10 +63,16 @@ public class loginActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 //Toast.makeText(getApplicationContext(),response,Toast.LENGTH_SHORT).show();
-                    MemberVO vo = gson.fromJson(response,MemberVO.class);
+                if(!response.equals("null")) {
+                    MemberVO vo = gson.fromJson(response, MemberVO.class);
                     Intent intent = new Intent(loginActivity.this, MainActivity.class);
-                    intent.putExtra("VO",vo);
+                    intent.putExtra("VO", vo);
                     startActivity(intent);
+                }
+                else if(response.equals("null")){
+                    Toast.makeText(getApplicationContext(), "ID와 PW를 확인해주세요.", Toast.LENGTH_SHORT).show();
+                    input_pw.setText("");
+                }
             }
         }, new Response.ErrorListener() {
             @Override

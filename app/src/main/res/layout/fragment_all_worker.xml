@@ -17,7 +17,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -54,7 +55,7 @@
             <View
                 android:id="@+id/worker_view"
                 android:layout_width="0dp"
-                android:layout_height="622dp"
+                android:layout_height="0dp"
                 android:background="@drawable/box_white_gradation"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -65,19 +66,19 @@
                 android:id="@+id/worker_title"
                 android:layout_width="290dp"
                 android:layout_height="41dp"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sleigothic"
                 android:gravity="center"
                 android:text="직원 관리"
                 android:textColor="@color/light_white"
                 android:textSize="34sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintBottom_toTopOf="@+id/guideline34"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.04" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ListView
                 android:id="@+id/listview_worker"

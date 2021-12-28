@@ -63,7 +63,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/edittext_focus"
+        android:background="@drawable/edittext_focus_login"
         android:backgroundTint="@color/light_white"
         android:ems="10"
         android:fontFamily="@font/sleigothic"
@@ -80,7 +80,7 @@
         android:id="@+id/input_id"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@drawable/edittext_focus"
+        android:background="@drawable/edittext_focus_login"
         android:backgroundTint="@color/light_white"
         android:clickable="false"
         android:ems="10"
@@ -152,6 +152,7 @@
         android:layout_width="133dp"
         android:layout_height="46dp"
         android:button="@drawable/checkbox_click"
+        android:buttonTint="@color/seco"
         android:fontFamily="@font/sleigothic"
         android:text="자동 로그인"
         android:textColor="@color/seco"
@@ -173,7 +174,9 @@
         android:textColor="@color/seco"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

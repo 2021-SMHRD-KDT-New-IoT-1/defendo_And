@@ -19,8 +19,6 @@ import net.daum.mf.map.api.MapPOIItem;
 public class LocationFragment extends Fragment {
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -85,11 +85,13 @@ tools:context=".worker_edit_Fragment">
         android:layout_width="403dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/sleigothic"
         android:gravity="center"
         android:text="직원 정보 수정"
         android:textColor="@color/light_white"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,33 +202,39 @@ tools:context=".worker_edit_Fragment">
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/edit_tel" />
 
-<Button
-    android:id="@+id/btn_edit"
-    android:layout_width="0dp"
-    android:layout_height="40dp"
-    android:background="@drawable/button_click"
-    android:fontFamily="@font/sleigothic"
-    android:text="저장"
-    android:textColor="@color/light_white"
-    android:textSize="18sp"
-    app:backgroundTint="@null"
-    app:layout_constraintEnd_toStartOf="@+id/guideline9"
-    app:layout_constraintStart_toStartOf="@+id/guideline14"
-    tools:layout_editor_absoluteY="585dp" />
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/button_click"
+        android:fontFamily="@font/sleigothic"
+        android:text="저장"
+        android:textColor="@color/light_white"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toBottomOf="@+id/edit_dept" />
 
     <android.widget.Button
         android:id="@+id/btn_back_edit"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/button_round"
         android:fontFamily="@font/sleigothic"
         android:text="뒤로가기"
         android:textColor="#ffb606"
         android:textSize="13sp"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
-        app:layout_constraintTop_toTopOf="@+id/guideline27" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/pw_check"
